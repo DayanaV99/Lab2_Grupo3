@@ -1,0 +1,25 @@
+header {
+    background-color: #304eb1;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    font-family: "Helvetica";
+
+}
+nav {
+    display: flex;
+    margin-left: auto; /* Mover a la derecha */
+}
+/* Add your CSS styles here if needed */
+nav a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #ffffff; /* Customize as per your design */
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  

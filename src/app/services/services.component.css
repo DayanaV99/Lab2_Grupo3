@@ -1,0 +1,56 @@
+.services {
+  text-align: center;
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.service {
+  margin: 1rem 0;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+.service img {
+  max-width: 300px;
+  height: 200px;
+  display: block;
+  margin: 0 auto 0.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service img:hover {
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.service:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.service:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+h2, p {
+  text-align: center;
+  font-family: "Helvetica";
+
+}

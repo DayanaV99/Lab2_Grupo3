@@ -1,13 +1,37 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ComunicacionService } from './comunicacion.service';
+import { HeaderComponent } from './header/header.component';
+import { HeroComponent } from './hero/hero.component';
+import { ServicesComponent } from './services/services.component';
+import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  standalone: true,
+  imports: [
+    HeaderComponent,
+    HeroComponent,
+    ServicesComponent,
+    ContactComponent,
+    FooterComponent
+  ],
+  providers: [ComunicacionService]
 })
-export class AppComponent {
-  title = 'Lab2-Grupo3';
+export class AppComponent implements OnInit {
+  currentSection: string = '';
+  currentMessage: string = '';
+
+  constructor(private comunicacionService: ComunicacionService) { }
+
+  ngOnInit() {
+    this.comunicacionService.currentSectionMessage.subscribe(({ section, message }) => {
+      console.log(`Sección actual: ${section}, Mensaje: ${message}`);
+      this.currentSection = section;
+      this.currentMessage = message;
+      document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
 }

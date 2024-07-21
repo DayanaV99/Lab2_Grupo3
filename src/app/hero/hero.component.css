@@ -1,0 +1,46 @@
+.hero {
+    font-family: "Helvetica";
+    text-align: justify;
+    padding: 4rem;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 4rem;
+  }
+  
+  .column {
+    grid-column: span 6;
+  }
+  
+  .carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel img {
+    width: 100%;
+    display: none;
+  }
+  
+  .carousel img.active {
+    display: block;
+  }
+  
+  .carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  
+  .carousel-control {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  

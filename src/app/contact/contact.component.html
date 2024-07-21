@@ -1,0 +1,31 @@
+<div class="contact-card" id="Contact">
+  <section class="contact">
+    <h2>Contacto</h2>
+    <p *ngIf="currentSection === 'Contact'">{{ message }}</p>
+    <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+      <label for="name">Nombre</label>
+      <input type="text" id="name" required [(ngModel)]="contact.name" name="name">
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" required [(ngModel)]="contact.email" name="email">
+      <label for="message">Mensaje</label>
+      <textarea id="message" required [(ngModel)]="contact.message" name="message"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <table *ngIf="showTable">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Email</th>
+          <th>Mensaje</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of contacts">
+          <td>{{ c.name }}</td>
+          <td>{{ c.email }}</td>
+          <td>{{ c.message }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>

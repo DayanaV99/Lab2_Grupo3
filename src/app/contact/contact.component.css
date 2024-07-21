@@ -1,0 +1,81 @@
+.contact-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  .contact {
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    background-color: white;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  label {
+    margin: 0.5rem 0 0.2rem 0;
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+  }
+  
+  input, textarea {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    width: 90%;
+    max-width: 600px;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    background-color: #304eb1;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: "Helvetica";
+
+  }
+  
+  .contact-table {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  th, li {
+    background-color: #304eb1;
+    color: white;
+    font-family: "Helvetica";
+
+  }
+  
+  td {
+    text-align: left;
+  }
+  
+  section {
+    font-family: "Helvetica";
+
+  }
